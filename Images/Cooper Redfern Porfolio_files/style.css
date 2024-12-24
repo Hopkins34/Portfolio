@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* || Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea {
+    font: inherit;
+    margin: 1rem;
+}
+
+/* || Variables */
+
+:root {
+
+    /* Fonts */
+    --FF: "Nunito", sans-serif;
+    --FF-HEADING: "Fugaz One", cursive;
+    --FS: clamp(1rem, 2vw, 1.5rem);
+    --FS-HERO: clamp(1.5rem, 2.2vw, 2rem);
+
+    /* Colors */
+
+        /* BG Color */
+        --BGCOLOR: darkgrey;
+        --BODY-BGCOLOR: grey;
+        --HERO-TEXT-BGCOLOR: rgba(255,255,255, 0.3);
+
+        /* Font Color */
+        --FONT-COLOR-DARK: black;
+        --FONT-COLOR-LIGHT: White;
+        --A-ANY: black;
+        --A-HOVER: #333;
+        --A-ACTIVE: #222;
+
+     /* Borders */
+    --BORDERS: 5px solid black;
+
+    /* Standard Padding */
+    --PADDING-TB: 0.25em;
+    --PADDING-SIDE: 2.5%;
+
+    /* Standard Margin */
+    --MARGIN: clamp(1em, 2.5vw, 1.5em);
+
+    /* Rounding */
+    --ROUNDING: 20px;
+}
+
+/* || Utility Classes*/
+
+.offscreen {
+    position: absolute;
+    left: -500px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* || General */
+
+html {
+    background-color: var(--BGCOLOR);
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--BODY-BGCOLOR);
+}
+
+h1, h2, h3 {
+    font-family: var(--FF-HEADING);
+    letter-spacing: 0.1em;
+}
+
+h2, h3 {
+    margin-bottom: 0.5rem;;
+}
+
+p {
+    line-height: 1.5;
+    padding: var(--PADDING-TB) 0;
+}
+
+a:any-link {
+    color: var(--A-ANY);
+}
+
+a:hover, a:focus-visible {
+    color: var(--A-HOVER);
+}
+
+a:active {
+    color: var(--A-ACTIVE);
+}
+
+/* ||HEADER */
+
+.Header {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Header__flex {
+    background-color: orange;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* || HERO */
+
+.Hero {
+    background-color: grey;
+    background-image: url(Images/Background.jpg);
+    position: relative;
+    height: 50vw;
+    max-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Hero__text {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    font: var(--FS-HERO);
+    background-color: var(--HERO-TEXT-BGCOLOR);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    border-radius: var(--ROUNDING);
+}
+
+.Hero__img {
+    grid-column-start: 2;
+    height: 50vw;
+    max-height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* || MAIN */
+
+.Section {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.Article {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    background-color: var(--HERO-TEXT-BGCOLOR);
+    margin: var(--MARGIN);
+}
+
+/* ||FOOTER */
+
+.Footer {
+    text-align: center;
+    background-image: url(Images/Background.jpg);
+}
+
+.Footer__p {
+    width: 75%;
+    margin: 0 auto;
+    background: var(--HERO-TEXT-BGCOLOR);
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 768px) {
+
+    .Hero__img {
+        display: none;
+    }
+
+    .Hero__text {
+        left: 50%;
+        width: 80%;
+        font-size: clamp(0.5rem, 4vw, 1.5rem);
+    }
+}

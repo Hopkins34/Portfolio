@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5501/contact.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cooper Redfern Porfolio</title>
+        
+        
+        
+        
+    <link rel="stylesheet" href="./Cooper Redfern Porfolio_files/style.css"><link rel="apple-touch-icon" sizes="180x180" href="http://127.0.0.1:5501/Favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="http://127.0.0.1:5501/Favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="http://127.0.0.1:5501/Favicon/favicon-16x16.png"></head>
+    <body>
+        <main class="Main">
+            <header class="Header">
+                <h2 class="Header__h2">Contact Me</h2>
+                <div class="Header__flex">
+                    <p><a class="Header__a" href="http://127.0.0.1:5501/index.html"><button class="Header__button">Home</button></a></p>
+                </div>
+            </header>
+            <section class="Section">
+                <article class="Article">
+                    <form>
+                        <label for="fname">First name:</label>
+                        <br>
+                        <input type="text" id="fname" name="fname" placeholder="Your Name" required=""><br>
+                        <label for="lname">Last name:</label>
+                        <br>
+                        <input type="text" id="lname" name="lname" placeholder="Your Name" required=""><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required="">
+                        <br>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+                        <br>
+
+                        <button type="submit">Submit</button>
+                </form></article>
+            </section>
+        </main>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

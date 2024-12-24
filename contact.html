@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Cooper Redfern Porfolio</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    </head>
+    <body>
+        <main class="Main">
+            <header class="Header">
+                <h2 class="Header__h2">Contact Me</h2>
+                <div class="Header__flex">
+                    <p><a class="Header__a" href="index.html"><button class="Header__button">Home</button></a></p>
+                </div>
+            </header>
+            <section class="Section">
+                <article class="Article">
+                    <form action="submit.php" method="POST">
+                        <label for="fname">First name:</label>
+                        <br>
+                        <input type="text" id="fname" name="fname" placeholder="Your First Name" required><br>
+                        <label for="lname">Last name:</label>
+                        <br>
+                        <input type="text" id="lname" name="lname" placeholder="Your Last Name" required><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <br>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="10" placeholder="Your Message" ></textarea>
+                        <br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </article>
+            </section>
+        </main>
+        <footer class="Footer">
+            <p class="Footer__p">&COPY; Cooper Redfern 2024</p>
+        </footer>
+    </body>
